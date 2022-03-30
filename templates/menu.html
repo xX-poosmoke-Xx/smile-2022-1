@@ -3,6 +3,7 @@
 {% block pageheading %}menu{% endblock %}
 
 {% block main %}
+    <div class="products">
     {% for product in products %}
     <div class="product-box">
         <h3>{{ product[0] }}</h3>
@@ -10,6 +11,10 @@
         <p><strong>volume: </strong>{{ product[2] }}</p>
         <p><strong>price: $</strong>{{ product[4] }}</p>
         <img src="static/images/{{ product[3] }}.jpg">
+        {% if logged_in %}
+        <a href="/addtocart/{{ product[5] }}">Add to cart</a>
+        {% endif %}
     </div>
     {% endfor %}
+    </div>
 {% endblock %}

@@ -185,6 +185,10 @@ table {
     font-weight: bold;
 }
 
+.error {
+    color: #ff0000;
+}
+
 
 @media only screen and (max-width: 600px) {
     .container {
